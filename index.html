@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>👥 Team Task Manager</h1>
+            <p>Build your team and complete tasks together 🚀</p>
+        </header>
+
+        <!-- Add Team Member -->
+        <section class="card">
+            <h2>👤 Add Team Member</h2>
+
+            <div class="form">
+                <input type="text" id="memberName" placeholder="Enter member name">
+                <button onclick="addMember()">Add Member</button>
+            </div>
+
+            <div id="teamList" class="team-list"></div>
+        </section>
+
+        <!-- Add Task -->
+        <section class="card">
+            <h2>📝 Create Task</h2>
+
+            <div class="form">
+                <input type="text" id="taskName" placeholder="Enter task">
+
+                <select id="taskMember">
+                    <option value="">Assign to...</option>
+                </select>
+
+                <button onclick="addTask()">Add Task</button>
+            </div>
+        </section>
+
+        <!-- Tasks -->
+        <section class="card">
+            <h2>📋 Team Tasks</h2>
+
+            <div id="taskList"></div>
+
+            <div class="progress-box">
+                <p>Team Progress</p>
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+                <p id="progressText">0% completed</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
